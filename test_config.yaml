@@ -1,0 +1,5 @@
+model:
+  path: "models/FashionMNISTModel_V0.pt"
+
+inference:
+  classes: ['T-shirt/top','Trouser','Pullover','Dress','Coat','Sandal','Sneaker','Bag','Ankle boot']
