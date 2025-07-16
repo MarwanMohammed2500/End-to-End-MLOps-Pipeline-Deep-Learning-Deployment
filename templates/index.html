@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionMNIST Fashion Clothing Predictor</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1><i class="fas fa-tshirt"></i> Hello to FashionMNIST Fashion Clothing Predictor!</h1>
+            <p>Upload an image of clothing and our AI will predict what type of fashion item it is. 
+               Supports T-shirts, trousers, dresses, coats, and more!</p>
+        </header>
+
+        <!-- Main Application Card -->
+        <div class="main-card">
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <div class="upload-text">
+                        <strong>Drop your image here or click to browse</strong>
+                    </div>
+                    <div class="upload-hint">
+                        Supports PNG, JPG, JPEG, GIF, and BMP files (max 10MB)
+                    </div>
+                    <button type="button" class="btn btn-primary" id="selectButton">
+                        <i class="fas fa-folder-open"></i> Select Image
+                    </button>
+                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                </div>
+            </div>
+
+            <!-- Preview Section -->
+            <div class="preview-section" id="previewSection">
+                <h3><i class="fas fa-eye"></i> Image Preview</h3>
+                <img id="imagePreview" class="image-preview" alt="Selected image preview">
+                <div class="text-center mt-3">
+                    <button type="button" class="btn btn-primary" id="predictButton" disabled>
+                        <i class="fas fa-magic"></i> Predict Fashion Item
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading Spinner -->
+            <div class="loading-spinner" id="loadingSpinner">
+                <div class="spinner"></div>
+                <p>Analyzing your image...</p>
+            </div>
+
+            <!-- Results Section -->
+            <div class="results-section" id="resultsSection">
+                <div class="result-card">
+                    <div class="result-label">
+                        <i class="fas fa-star"></i> Prediction Result
+                    </div>
+                    <div class="result-value" id="resultValue">
+                        <!-- Prediction will appear here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                <i class="fas fa-check-circle"></i> 
+                <span>Prediction completed successfully!</span>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage">
+                <i class="fas fa-exclamation-triangle"></i> 
+                <span>Error message will appear here</span>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <div class="feature-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="feature-title">AI-Powered</div>
+                <div class="feature-description">
+                    Uses advanced neural networks trained on the FashionMNIST dataset
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="feature-title">Fast Processing</div>
+                <div class="feature-description">
+                    Get instant predictions with optimized model inference
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="feature-title">Mobile Friendly</div>
+                <div class="feature-description">
+                    Responsive design works perfectly on all devices
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="{{ url_for('static', path='script.js') }}"></script>
+</body>
+</html>

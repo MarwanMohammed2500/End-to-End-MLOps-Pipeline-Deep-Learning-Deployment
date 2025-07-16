@@ -3,3 +3,4 @@ runs
 test
 __pycache__
 data
+.gitignore
