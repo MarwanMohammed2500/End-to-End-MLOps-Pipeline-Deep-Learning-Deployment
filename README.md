@@ -62,7 +62,7 @@ FashionMNIST_Modular_Deployed/
 │   ├── dataloader.py      # Where the data gets loaded, turned into `Tensor` objects, and then into `DataLoader` objects for proper PyTorch data handling
 │   ├── inference.py       # Where inference logic lives
 │   ├── metrics.py         # Initializing metrics and a simple, custom-made `classification_report`
-│   ├── model.py           # Where the model class lives
+│   ├── model.py           # Where the model class lives (Later, if I create more models, I'll add 3 sub-dirs, `deployment_model`, `previously_deployed`, and `in_test`)
 │   ├── plot.py            # Where plotting functions live.
 │   ├── preproc.py         # Where Preprocessing logic is.
 │   ├── train.py           # Where the training function lives.
