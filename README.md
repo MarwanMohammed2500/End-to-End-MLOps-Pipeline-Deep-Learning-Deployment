@@ -131,3 +131,11 @@ This project is licensed under the MIT License. For more details, read `LICENSE`
 Feel free to contribute however you like. Just fork the repository and don't forget to ⭐ it!
 
 If you'd like to connect or chat, feel free to reach out via Email or LinkedIn. I'm always happy to talk!
+
+---
+# Screenshots from the app
+### Main Page:
+![Main Page](Screenshots/main_page.png "Main Page")
+
+### Inference:
+![Inference](Screenshots/inference.png "Inference")
