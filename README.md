@@ -98,7 +98,7 @@ You can modify `train_config.yaml` and `test_config.yaml` to whatever you'd like
 ---
 ## About the Model
 The model is saved as a TorchScript model (instead of saving the `state_dict` of the model), which offers plenty of benefits over saving the `state_dict`:
-- It offers better portability (You can deploy the model on a C++ server or a .NET server, embedded device, even Python environments without the overhead of redefining the model class)
+- It offers better portability (You can deploy the model on a C++ server or a .NET server, embedded device, even Python environments without the headache of redefining the model class)
 - No need to redefine the model class for inference.
 - Easier deployments with lightweight dependencies.
 
