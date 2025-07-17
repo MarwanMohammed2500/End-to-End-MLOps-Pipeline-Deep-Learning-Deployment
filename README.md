@@ -27,6 +27,7 @@ I used:
 - **matplotlib**: Visualization and debugging
 - **tqdm**: Used for progress during training
 - **TensorBoard**: Model Training Logging (for train and test loss and accuracy)
+- **Docker**: Project Containarization for reproducibility.
 
 ---
 
@@ -122,12 +123,14 @@ During model training, I also spent some time tuning the learning rate, optimize
 
 ---
 ## Upcoming Improvements
-As of July 17th, 2025, the app has not yet been dockerized. Soon I'll be adding:
-- `Dockerfile` and `docker-compose.yaml` files
-- Production-ready containerization
+As of July 17th, 2025, the app is not being monitored. Soon I'll be adding:
 - Monitoring and Logging
 - Further polishing and performance improvements
 I might also add a simple CI/CD Pipeline, but that's way after the Docker update.
+
+---
+## Dockerhub Repo
+You can check the image repo from Dockerhub [here](https://hub.docker.com/r/marwanmohammed2500/deep-learning-deployment)
 
 ---
 ## License
