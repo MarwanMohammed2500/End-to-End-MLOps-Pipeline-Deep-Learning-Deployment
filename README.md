@@ -94,11 +94,11 @@ $ cd modular_app
 ```
 Then, to train the model:
 ```bash
-$ python3 trainer.py --config-file ../train_config.yaml
+$ python3 trainer.py --config ../train_config.yaml
 ```
 Or to run inference:
 ```bash
-$ python3 inference.py --image_path image_path
+$ python3 inference.py --image_path image_path --config ../test_config.yaml
 ```
 You can modify `train_config.yaml` and `test_config.yaml` to whatever you'd like. I just made it easier to change variables and control some hyperparameters.
 
