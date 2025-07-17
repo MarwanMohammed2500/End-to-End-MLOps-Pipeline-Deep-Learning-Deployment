@@ -1,3 +1,8 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
+</p>
+
 # FashionMNIST Dataset deployed model
 > **Note**: This project is *not* intended to replicate results on the official FashionMNIST benchmark. Instead, it's a hands-on exploration of building, modularizing, and deploying a deep learning model using best practices, with a focus on backend MLOps workflows. (Frontend was auto-generated via Replit and not the main focus.)
 ---
