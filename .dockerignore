@@ -1,0 +1,12 @@
+data/
+Docker/
+fully_mod/
+modular_app/
+runs/
+Screenshots/
+test/
+.gitignore
+.dockerignore
+FashionMNIST_Full.ipynb
+LICENSE
+README.md

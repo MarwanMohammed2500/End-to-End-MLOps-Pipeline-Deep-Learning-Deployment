@@ -41,10 +41,7 @@ starlette==0.47.1
 sympy==1.13.3
 tensorboard==2.19.0
 tensorboard-data-server==0.7.2
-torch==2.7.1+cpu
-torchaudio==2.7.1+cpu
 torchmetrics==1.7.4
-torchvision==0.22.1+cpu
 tqdm==4.67.1
 typing-inspection==0.4.1
 typing_extensions==4.12.2

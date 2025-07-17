@@ -1,0 +1,8 @@
+services:
+  model:
+    build: 
+      context: ..
+      dockerfile: Docker/Dockerfile
+    ports:
+    - "5000:5000"
+  
