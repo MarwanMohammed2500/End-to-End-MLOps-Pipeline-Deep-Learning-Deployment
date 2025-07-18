@@ -47,7 +47,8 @@ Even though the problem is simple, the **architecture and workflow** reflect wha
 
 ---
 ## How to install and run the project
-To clone and run the project locally:
+
+### To clone and run the project locally
 ```bash
 $ git clone github.com/MarwanMohammed2500/FashionMNIST_Modular_Deployed
 $ cd FashionMNIST_Modular_Deployed
@@ -62,7 +63,17 @@ Or, for a Windows PC:
 python run_server.py
 ```
 
+### To pull the image from the registry and run it locally
+```bash
+$ docker pull marwanmohammed2500/deep-learning-deployment:ModelV0
+$ docker run -p 5000:5000 marwanmohammed2500/deep-learning-deployment:ModelV0
+```
+### To run docker compose to build and run the image
+```bash
+$ docker compose -f Docker/docker-compose.yml up --build
+```
 ---
+
 ## Project Structure
 ```
 FashionMNIST_Modular_Deployed/
@@ -71,7 +82,7 @@ FashionMNIST_Modular_Deployed/
 │   ├── dataloader.py      # Where the data gets loaded, turned into `Tensor` objects, and then into `DataLoader` objects for proper PyTorch data handling
 │   ├── inference.py       # Where inference logic lives
 │   ├── metrics.py         # Initializing metrics and a simple, custom-made `classification_report`
-│   ├── model.py           # Where the model class lives (Later, if I create more models, I'll add 3 sub-dirs, `deployment_model`, `previously_deployed`, and `in_test`)
+│   ├── model.py           # Where the model class lives.
 │   ├── plot.py            # Where plotting functions live.
 │   ├── preproc.py         # Where Preprocessing logic is.
 │   ├── train.py           # Where the training function lives.
