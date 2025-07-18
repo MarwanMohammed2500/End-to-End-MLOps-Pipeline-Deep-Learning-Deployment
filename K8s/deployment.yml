@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fashionmnist-deployment
+  labels:
+    app: fashionmnist-deployment
+
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fashionmnist-deployment
+  template:
+    metadata:
+      labels:
+        app: fashionmnist-deployment
+    spec:
+      containers:
+      - name: fashionmnist-container
+        image: marwanmohammed2500/deep-learning-deployment:ModelV0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 80
+        livenessProbe:
+          httpGet:
+            path: /health-check
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10
+          failureThreshold: 3
+
+        readinessProbe:
+          httpGet:
+            path: /ready
+            port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 10

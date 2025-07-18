@@ -1,5 +1,6 @@
 # FastAPI
 from fastapi import FastAPI, HTTPException, UploadFile, Request
+from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 import ast
@@ -62,3 +63,11 @@ async def pred(file: UploadFile):
         pred_idx = torch.softmax(predictor(image), dim=1).argmax(dim=1).item()
         pred_class = classes[pred_idx]
     return {"response": pred_class}
+
+@app.get("/health-check")
+def health_check():
+    return HTMLResponse(status_code=204)
+
+@app.get("/ready")
+def readiness_check():
+    return HTMLResponse(status_code=204)

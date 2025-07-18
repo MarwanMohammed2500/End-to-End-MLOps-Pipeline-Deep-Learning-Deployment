@@ -4,13 +4,13 @@ WORKDIR /app
 
 RUN python -m venv /opt/venv && \
     . /opt/venv/bin/activate && \
-    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+    pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
 
 COPY requirements.txt .
 
 RUN python -m venv /opt/venv && \
     . /opt/venv/bin/activate && \
-    pip install -r requirements.txt
+    pip install --no-cache-dir -r requirements.txt
 
 
 FROM python:3.12-slim
