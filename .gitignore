@@ -1,6 +1,6 @@
-fully_mode
-runs
-test
-__pycache__
-data
+fully_mod/
+runs/
+test/
+__pycache__/
+data/
 .gitignore
