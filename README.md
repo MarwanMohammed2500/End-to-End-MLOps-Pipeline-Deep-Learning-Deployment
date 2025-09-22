@@ -77,33 +77,34 @@ $ docker compose -f Docker/docker-compose.yml up --build
 ## Project Structure
 ```
 FashionMNIST_Modular_Deployed/
-├── app/                   # Preprocessing logic
-├── modular_app/           # Modular training/inference components
-│   ├── dataloader.py      # Where the data gets loaded, turned into `Tensor` objects, and then into `DataLoader` objects for proper PyTorch data handling
-│   ├── inference.py       # Where inference logic lives
-│   ├── metrics.py         # Initializing metrics and a simple, custom-made `classification_report`
-│   ├── model.py           # Where the model class lives.
-│   ├── plot.py            # Where plotting functions live.
-│   ├── preproc.py         # Where Preprocessing logic is.
-│   ├── train.py           # Where the training function lives.
-│   ├── trainer.py         # Full training pipeline.
-│   └── utils.py           # Utility functions.
-├── models/                # TorchScript models
-├── static/                # Frontend assets (JS/CSS)
-├── templates/             # HTML frontend
-├── .env                   # Environment variables
-├── main.py                # FastAPI app logic
-├── run_server.py          # Starts the FastAPI server
-├── requirements.txt       # Python dependencies
-├── train_config.yaml      # Training configuration
-├── test_config.yaml       # Inference configuration
+├── app/                        # Preprocessing logic
+├── src/                        # Modular training/inference components
+│   ├── dataloader.py           # Where the data gets loaded, turned into `Tensor` objects, and then into `DataLoader` objects for proper PyTorch data handling
+│   ├── inference.py            # Where inference logic lives
+│   ├── metrics.py              # Initializing metrics and a simple, custom-made `classification_report`
+│   ├── model.py                # Where the model class lives.
+│   ├── plot.py                 # Where plotting functions live.
+│   ├── preproc.py              # Where Preprocessing logic is.
+│   ├── preprocessing_layer.py  # Data preprocessing layer before feeding the input data into the model
+│   ├── train.py                # Where the training function lives.
+│   ├── trainer.py              # Full training pipeline.
+│   └── utils.py                # Utility functions.
+├── models/                     # TorchScript models
+├── static/                     # Frontend assets (JS/CSS)
+├── templates/                  # HTML frontend
+├── .env                        # Environment variables
+├── main.py                     # FastAPI app logic
+├── run_server.py               # Starts the FastAPI server
+├── requirements.txt            # Python dependencies
+├── train_config.yaml           # Training configuration
+├── test_config.yaml            # Inference configuration
 ├── FashionMNIST_Full.ipynb # Exploration and code modularization
 └── LICENSE
 ```
 ### Running the modularized version
-You can simply go to `modular_app`:
+You can simply go to `src`:
 ```bash
-$ cd modular_app
+$ cd src
 ```
 Then, to train the model:
 ```bash
