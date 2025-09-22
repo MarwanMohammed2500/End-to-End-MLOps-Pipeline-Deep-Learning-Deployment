@@ -6,7 +6,7 @@ from fastapi.templating import Jinja2Templates
 import ast
 
 # Preprocessing Layer
-from app.preprocessing_layer import preprocess_image
+from src.preprocessing_layer import preprocess_image
 
 # Model Loading
 import torch
